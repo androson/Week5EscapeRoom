@@ -5,6 +5,8 @@ using TMPro;
 
 public class OpenDoor : MonoBehaviour
 {
+    AudioSource ErrorSound;
+
     private Animator anim;
 
     private bool IsAtDoor = false;
@@ -21,6 +23,8 @@ public class OpenDoor : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+
+        ErrorSound = GetComponent<AudioSource>();
     }
 
     
@@ -36,9 +40,12 @@ public class OpenDoor : MonoBehaviour
             Cursor.visible = false;
         }
 
-        if(codeTextValue.Length >= 8)
+        if(codeTextValue.Length >= 6)
         {
+            ErrorSound.Play();
             codeTextValue = "";
+            
+
         }
 
         if(Input.GetKey(KeyCode.E) && IsAtDoor == true)
