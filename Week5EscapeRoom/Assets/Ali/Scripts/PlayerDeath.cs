@@ -23,7 +23,7 @@ public class PlayerDeath : MonoBehaviour
     {
         GameObject collisionGameObject = collision.gameObject;
 
-        if (collisionGameObject.tag == "Wall")
+        if (collisionGameObject.tag == "Spike")
         {
             Invoke("LoadScene", 0.0001f);
             Debug.Log ("Hiiiii") ;
