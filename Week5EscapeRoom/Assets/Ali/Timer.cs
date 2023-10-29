@@ -20,6 +20,9 @@ public class Timer : MonoBehaviour
     public bool hasLimit;
     public float timerLimit;
 
+     
+
+
     void Start()
     {
         
@@ -40,6 +43,8 @@ public class Timer : MonoBehaviour
         }
 
         SetTimerText();
+
+       
     }
 
     private void SetTimerText()

@@ -15,6 +15,9 @@ public class OpenDoor : MonoBehaviour
     string codeTextValue = "";
     public string safeCode;
     public GameObject CodePanel;
+    public GameObject CluePanel;
+
+    public bool SetClue = false;
 
 
 
@@ -55,6 +58,15 @@ public class OpenDoor : MonoBehaviour
             Cursor.visible = true;
 
         }
+
+        
+
+        if (Input.GetKeyDown(KeyCode.C)) 
+        {
+    
+            CluePanel.SetActive(!CluePanel.activeSelf);
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)
