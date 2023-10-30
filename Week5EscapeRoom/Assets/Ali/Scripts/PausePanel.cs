@@ -17,23 +17,14 @@ public class PausePanel : MonoBehaviour
 
     void update()
     {
-        //Pause();
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            PausePanell.gameObject.SetActive(true);
-            
-        }
+        
 
 
     }
 
      public void Pause()
     {
-        if (Input.GetKey(KeyCode.B))
-        {
-            PausePanell.SetActive(true);
-        }
+        
    
     }
 
@@ -46,6 +37,8 @@ public class PausePanel : MonoBehaviour
      public void Resume()
     {
         PausePanell.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         
     }
 
