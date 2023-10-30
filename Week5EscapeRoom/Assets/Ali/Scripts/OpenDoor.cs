@@ -43,7 +43,7 @@ public class OpenDoor : MonoBehaviour
             Cursor.visible = false;
         }
 
-        if(codeTextValue.Length >= 6)
+        if(codeTextValue.Length >= 7)
         {
             ErrorSound.Play();
             codeTextValue = "";
